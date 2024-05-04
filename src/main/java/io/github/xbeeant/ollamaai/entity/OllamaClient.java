@@ -55,9 +55,9 @@ public class OllamaClient {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     // 处理SSE事件
-                    System.out.println(line);
+                    // System.out.println(line);
                     response.getWriter().write(line + "\n");
-                    response.getWriter().flush();
+                    response.flushBuffer();
                 }
             }
         } else {
